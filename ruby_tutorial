@@ -1,2 +1,0 @@
-class MegaAnfitriao
- 	attr_acessor :nomes
