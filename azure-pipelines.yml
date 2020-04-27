@@ -19,15 +19,6 @@ steps:
 - script: gem install rails && rails -v
   displayName: 'gem install rails'
 
-- script: bundle exec rake
-  displayName: 'bundle exec rake'
-
-- task: PublishTestResults@2
-  condition: succeededOrFailed()
-  inputs:
-    testResultsFiles: '**/test-*.xml'
-    testRunTitle: 'Ruby tests'
-
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: Cobertura
